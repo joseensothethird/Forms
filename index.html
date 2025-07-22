@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iconitrax | Real Estate Inquiry</title>
+  <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4E0BAQEe9mfsOkIsoQ/company-logo_200_200/company-logo_200_200/0/1719257741522/iconitrax_logo?e=2147483647&v=beta&t=XsolCnOgvHevC6R3M8W8ohlhhmrhTsOvHiEhtf0TPoU" type="image/png">
+</head>
+<body>
+<div class="iconitrax-form-container">
+  <!-- Premium Header Section -->
+  <div class="form-header">
+    <div class="logo-section">
+    <a href="https://www.iconitrax.com" target="_blank" rel="noopener noreferrer">
+  <img 
+    src="https://www.iconitrax.com/wp-content/uploads/2023/01/350×180.png" 
+    alt="Iconitrax" 
+    class="company-logo"
+    onerror="this.src='https://via.placeholder.com/350x180?text=ICONITRAX'">
+</a>
+
+
+      <div class="trust-badges">
+        <span class="badge">🏆 Certified Realtors</span>
+        <span class="badge">🔒 GDPR Compliant</span>
+        <span class="badge">🏡 500+ Properties Listed</span>
+      </div>
+    </div>
+    <div class="header-content">
+      <h1>Real Estate Inquiry</h1>
+      <p class="subheader">Complete this brief form to unlock exclusive property matches from our network</p>
+    </div>
+  </div>
+
+  <!-- Progress Indicator -->
+  <div class="form-progress">
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="progress-steps">
+      <div class="progress-step active" data-step="1">1</div>
+      <div class="progress-step" data-step="2">2</div>
+      <div class="progress-step" data-step="3">3</div>
+    </div>
+  </div>
+
+  <!-- Main Form Content -->
+  <form class="inquiry-form">
+    <!-- STEP 1 -->
+    <div class="form-step active" data-step="1">
+      <fieldset class="form-section">
+        <legend>Your Information</legend>
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required placeholder="John Smith">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 123-456-7890">
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-navigation">
+        <button type="button" class="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="form-step" data-step="2">
+      <fieldset class="form-section">
+        <legend>Property Preferences</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="property-type">Property Type*</label>
+            <select id="property-type" name="property_type" required>
+              <option value="">Select type</option>
+              <option value="condo">Condo/Apartment</option>
+              <option value="house">Single-Family Home</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="commercial">Commercial</option>
+              <option value="land">Land</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget Range (CAD)*</label>
+            <select id="budget" name="budget" required>
+              <option value="">Select range</option>
+              <option value="300k-500k">$300K - $500K</option>
+              <option value="500k-1m">$500K - $1M</option>
+              <option value="1m-2m">$1M - $2M</option>
+              <option value="2m-plus">$2M+</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group" id="location-section">
+          <label>Preferred Locations (Select up to 3)</label>
+          <div class="checkbox-grid">
+            <div class="checkbox-item">
+              <input type="checkbox" id="toronto" name="location" value="Toronto">
+              <label for="toronto">Toronto, ON</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="vancouver" name="location" value="Vancouver">
+              <label for="vancouver">Vancouver, BC</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="montreal" name="location" value="Montreal">
+              <label for="montreal">Montreal, QC</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="calgary" name="location" value="Calgary">
+              <label for="calgary">Calgary, AB</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-navigation">
+        <button type="button" class="back-btn">Back</button>
+        <button type="button" class="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-step" data-step="3">
+      <fieldset class="form-section">
+        <legend>Additional Details</legend>
+        <div class="form-group">
+          <label for="timeline">Purchase Timeline*</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">Select timeline</option>
+            <option value="3mo">Within 3 months</option>
+            <option value="6mo">3-6 months</option>
+            <option value="1yr">6-12 months</option>
+            <option value="exploring">Just exploring</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Special Requirements</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Must-have features, preferred neighborhoods, etc."></textarea>
+        </div>
+      </fieldset>
+
+      <div class="form-footer">
+        <div class="privacy-notice">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">I agree to Iconitrax's <a href="#">Privacy Policy</a> and consent to being contacted</label>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="back-btn">Back</button>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Get Personalized Matches</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<style>
+/* Modern Real Estate Form Styling */
+.iconitrax-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.logo-section {
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.badge {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.subheader {
+  margin: 10px 0 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.form-progress {
+  position: relative;
+  padding: 30px 0 20px;
+  background: #f8fafc;
+}
+
+.progress-bar-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #2b6cb0;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.progress-step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.progress-step.active {
+  background: #2b6cb0;
+  color: white;
+}
+
+.inquiry-form {
+  padding: 30px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  border: 1px solid #edf2f7;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.form-section legend {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #2d3748;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.2s;
+  background-color: #f8fafc;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+  background-color: white;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item input {
+  width: auto;
+  margin-right: 8px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-footer {
+  margin-top: 30px;
+}
+
+.privacy-notice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.privacy-notice input {
+  width: auto;
+  margin-right: 8px;
+}
+
+.privacy-notice a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.next-btn, .back-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.next-btn {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  margin-left: auto;
+}
+
+.next-btn:hover {
+  background: #2c5282;
+}
+
+.back-btn {
+  background: #f8fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.back-btn:hover {
+  background: #edf2f7;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #2b6cb0, #3182ce);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #2c5282, #2b6cb0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .progress-steps {
+    max-width: 90%;
+  }
+  
+  .form-section {
+    padding: 20px 15px;
+  }
+  
+  .iconitrax-form-container {
+    border-radius: 0;
+  }
+  
+  .form-navigation {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .next-btn, .back-btn {
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.inquiry-form');
+  const steps = document.querySelectorAll('.form-step');
+  const progressSteps = document.querySelectorAll('.progress-step');
+  const progressBar = document.getElementById('progress-bar');
+  const nextBtns = document.querySelectorAll('.next-btn');
+  const backBtns = document.querySelectorAll('.back-btn');
+  let currentStep = 0;
+
+  showStep(currentStep);
+  updateProgressBar();
+
+  function showStep(stepIndex) {
+    steps.forEach((step, index) => {
+      step.classList.toggle('active', index === stepIndex);
+    });
+
+    progressSteps.forEach((step, index) => {
+      step.classList.toggle('active', index <= stepIndex);
+    });
+
+    updateProgressBar();
+  }
+
+  function updateProgressBar() {
+    const progressPercentage = (currentStep / (steps.length - 1)) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
+  }
+
+  function validateStep(stepIndex) {
+    const currentStepFields = steps[stepIndex].querySelectorAll('input, select, textarea');
+    let isValid = true;
+
+    currentStepFields.forEach(field => {
+      field.style.borderColor = '#e2e8f0'; // Reset border
+
+      if (field.hasAttribute('required')) {
+        if (field.type === 'checkbox') {
+          // Only check the privacy checkbox
+          if (field.name === 'privacy' && !field.checked) {
+            field.style.borderColor = '#e53e3e';
+            isValid = false;
+          }
+        } else if (!field.value.trim()) {
+          field.style.borderColor = '#e53e3e';
+          isValid = false;
+        }
+      }
+    });
+
+    // Special case: at least 1 checkbox selected in location (step 2)
+    if (stepIndex === 1) {
+      const locationCheckboxes = steps[stepIndex].querySelectorAll('input[name="location"]');
+      const checkedCount = Array.from(locationCheckboxes).filter(cb => cb.checked).length;
+      const locationSection = document.getElementById('location-section');
+
+      if (checkedCount === 0 || checkedCount > 3) {
+        locationSection.style.border = '1px solid #e53e3e';
+        isValid = false;
+      } else {
+        locationSection.style.border = 'none';
+      }
+    }
+
+    return isValid;
+  }
+
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (validateStep(currentStep)) {
+        currentStep++;
+        if (currentStep >= steps.length) currentStep = steps.length - 1;
+        showStep(currentStep);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  backBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentStep--;
+      if (currentStep < 0) currentStep = 0;
+      showStep(currentStep);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (validateStep(currentStep)) {
+      const submitBtn = form.querySelector('.submit-btn');
+      submitBtn.innerHTML = '✓ Submitted Successfully';
+      submitBtn.style.background = '#38a169';
+
+      setTimeout(() => {
+        form.reset();
+        currentStep = 0;
+        showStep(currentStep);
+        submitBtn.innerHTML = '<span class="btn-text">Get Personalized Matches</span><span class="btn-icon">→</span>';
+        submitBtn.style.background = 'linear-gradient(to right, #2b6cb0, #3182ce)';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 2000);
+    }
+  });
+});
+</script>
+</body>
+</html>
